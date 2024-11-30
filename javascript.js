@@ -19,7 +19,7 @@ function addHoverEffect() {
 
                 // if background color is already changed, increase opacity by 0.1
                 const bgColor = square.style.backgroundColor;
-                let parts = bgColor.slice(5, -1).split(',');
+                let parts = bgColor.slice(5, -1).split(','); // eg. for rbga(255, 100, 97, 0.1), gives ['255', '100', '97', '0.1']
                 let opacity = parts[3];
                 parts[3] = parseFloat(opacity) + 0.1;
                 newBgColor = `rgba(${parts.join(', ')})`;
